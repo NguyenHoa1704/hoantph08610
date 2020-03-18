@@ -13,7 +13,7 @@ export class ProductListComponent implements OnInit {
   ngOnInit(): void {
   }
 //  name: string = 'Item 1';
-product : Product = {
+product : product = {
   name: 'nguyễn thị hoa',
   price: 100000000,
   desc: 'xinh dep',
