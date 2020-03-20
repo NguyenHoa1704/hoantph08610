@@ -2,11 +2,11 @@ import { Product } from './Product';
 export const data : Product[] = [
     {
       id: 1,
-      name: "Item 1",
-      price: 220,
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!',
+      name: "Hoa",
+      price: 10000000000000,
+      desc: 'Hoa xinh gái',
       status: false,
-      img: 'https://dummyimage.com/275x175/000/fff'
+      img: 'https://scontent-hkt1-1.xx.fbcdn.net/v/t1.0-9/s960x960/51854065_2184089838521507_6488174379854200832_o.jpg?_nc_cat=108&_nc_sid=7aed08&_nc_ohc=HtLJiqj3y8MAX8MxJwd&_nc_ht=scontent-hkt1-1.xx&_nc_tp=7&oh=d905d4213f535f8ee9fab933f0536a18&oe=5E98B74A'
     },
     {
       id: 2,
@@ -20,62 +20,6 @@ export const data : Product[] = [
       id: 3,
       name: "Item 3",
       price: 220,
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!',
-      status: false,
-      img: 'https://dummyimage.com/275x175/000/fff'
-    },
-    {
-      id: 4,
-      name: "Item 4",
-      price: 14.99,
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!',
-      status: false,
-      img: 'https://dummyimage.com/275x175/000/fff'
-    },
-    {
-      id: 5,
-      name: "Item 5",
-      price: 24.99,
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!',
-      status: false,
-      img: 'https://dummyimage.com/275x175/000/fff'
-    },
-    {
-      id: 6,
-      name: "Item 6",
-      price: 54.99,
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!',
-      status: false,
-      img: 'https://dummyimage.com/275x175/000/fff'
-    },
-    {
-      id: 7,
-      name: "Item 7",
-      price: 4.99,
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!',
-      status: false,
-      img: 'https://dummyimage.com/275x175/000/fff'
-    },
-    {
-      id: 8,
-      name: "Item 8",
-      price: 94.99,
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!',
-      status: false,
-      img: 'https://dummyimage.com/275x175/000/fff'
-    },
-    {
-      id: 9,
-      name: "Item 9",
-      price: 74.99,
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!',
-      status: false,
-      img: 'https://dummyimage.com/275x175/000/fff'
-    },
-    {
-      id: 10,
-      name: "Item 10",
-      price: 64.99,
       desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!',
       status: false,
       img: 'https://dummyimage.com/275x175/000/fff'
