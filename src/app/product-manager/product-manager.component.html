@@ -1,0 +1,19 @@
+<table style="width:100%">
+  <tr>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Status</th>
+    <th>Delete</th>
+  </tr>
+  <tr *ngFor="let product of products>
+    <td>
+      <img img class="card-img-top" [src]="product.img" alt="">
+    </td>
+    <td>{{product.name}}</td>
+    <td>{{product.price}}</td>
+    <td>{{product.desc}}</td>
+    <td>{{product.desc}}{{product.desc}}</td>
+    <td><button class="btn btn-primary" (click)="removeItem(product.id)">Delete</button></td>
+  </tr>
+  
+</table>
