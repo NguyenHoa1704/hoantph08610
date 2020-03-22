@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Data } from './MockData';
+import { data } from './MockData';
 import { Product } from './Product';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 export class NewService {
 
   api = 'https://jsonplaceholder.typicode.com/posts';
-  products = Data;
+  products = data;
   constructor(
     private http: HttpClient
   ) { }
