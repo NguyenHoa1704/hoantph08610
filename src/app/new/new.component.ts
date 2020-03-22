@@ -8,17 +8,24 @@ import { NewService } from '../new.service';
   styleUrls: ['./new.component.css']
 })
 export class NewComponent implements OnInit {
+
   selected: Product;
   products: Product[];
+
   constructor(
     private newService: NewService
-  ) { }
- 
+  ) { 
+
+  }
+
   ngOnInit(): void {
     this.getProducts();
   }
+ 
   getProducts(){
-    this.newService.getProducts().subscribe(data => {this.products = data;})
+   this.newService.getProducts().subscribe(data => {
+     this.products = data;
+    });
   }
 
 }
