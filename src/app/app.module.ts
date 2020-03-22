@@ -21,7 +21,7 @@ import { HelloComponent } from './hello.component';
 import { ProductService } from './product.service';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
+  imports:      [ BrowserModule, FormsModule, AppRoutingModule,   HttpClientModule ],
   declarations: [ AppComponent, HelloComponent, ProductListComponent, SlideComponent, CategoryComponent, ProductComponent, ProductAddComponent, ManagerComponent, HomeComponent, ManagerComponent, NewComponent, NotFoundComponent, ProductDetailComponent, ProductEditComponent ],
   bootstrap:    [ AppComponent ],
   providers: [ProductService],

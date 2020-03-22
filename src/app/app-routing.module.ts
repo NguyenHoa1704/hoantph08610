@@ -1,6 +1,6 @@
-import { NgModule} from '@angular/core';
-import { Routes, RouterModule} from '@angular/router';
-import {ProductAddComponent} from './product-add/product-add.component';
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+import { ProductAddComponent } from './product-add/product-add.component';
 import { SlideComponent } from './slide/slide.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ManagerComponent } from './manager/manager.component';
@@ -8,6 +8,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { HomeComponent } from './home/home.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { NewComponent } from './new/new.component';
+
+
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: 'home', component: HomeComponent},
@@ -21,7 +23,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports : [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
