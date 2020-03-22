@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {data} from '../MockData';
 import { Product } from '../Product';
 import { ProductService } from '../product.service';
 @Component({
@@ -7,14 +8,13 @@ import { ProductService } from '../product.service';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit {
- 
+ products: Product[];
+ selected: Product;
   constructor(
     private productService: ProductService
   ) { 
     console.log('constructor')
   }
-   selected: Product;
-  products: Product[];
   ngOnInit(): void {
     this.getProducts();
   }
@@ -25,7 +25,8 @@ export class ProductListComponent implements OnInit {
     // this.products = this.productService.removeProduct(id);
     this.products = this.products.filter(product => product.id != id)
   }
-   showDetail(product){
+   showdetail(product){
     this.selected = product;
    }
+
 }

@@ -12,18 +12,19 @@
         <h5>${{product.price}}</h5>
         <p class="card-text">{{product.desc}}</p>
         <p class="card-text">{{product.status ? 'In stock': 'Out stock'}}</p>
+        <button (click)='removeItem(product.id)'>Delete</button>
+        <button (click)='showdetail(product)'>>Chi tiết!</button>
       </div>
-      <div class="card-footer">
-          <button class="btn btn-primary" (click)="removeItem(product.id)">Xóa</button>
-          <button class="btn btn-primary" (click)="showDetail(product)">Chi tiết!</button>
-          <input type="text" name="" id="" [(ngModel)]="product.name" class="form-control mt-3">
-      </div>
+      <form action="">
+        <input type="text" [(ngModel)] = "product.name" name = "product-name">
+        <input type="text" [(ngModel)] = "product.desc" name = "product-desc">
+      </form>
     </div>
   </div>
 
 </div>
 
 <div *ngIf="selected">
-  <app-product [data]="selected"></app-product>
+  <app-product [key]="selected"></app-product>
 </div>
      
