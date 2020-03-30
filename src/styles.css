@@ -251,7 +251,7 @@ body a:hover {
     background: url(../images/bg2.jpg) no-repeat center;
     background-size: cover;
     background-attachment: fixed;
-    background: #0f3370;
+    background: rgba(243, 78, 13, 0.877)
 }
 
 
