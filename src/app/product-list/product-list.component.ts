@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-// import { data } from '../MockData';
+import { Data } from '../MockData';
 import { Product } from '../Product';
 import { ProductService } from '../product.service';
 
@@ -23,27 +23,20 @@ export class ProductListComponent implements OnInit {
     this.getProducts();
   }
   getProducts(){
-   this.productService.getProducts().subscribe(data => {
-     console.log(data);
-     this.products = data;
-    });
+    this.productService.getProducts().subscribe(Data => {
+      this.products = Data;
+    })
   }
-  removeItem(id){
-    this.products = this.productService.removeProduct(id);
-    // this.products = this.products.filter(product => product.id != id);
-  }
-
-
   // removeItem(id){
   //   this.products = this.productService.removeProduct(id);
   // }
 
-  // showdetai(product) {
-  //   this.selected = product;
-  // }
-  // removeItem(id) {
-  //   this.products = this.products.filter(product => product.id != id);
-  // }
+  showdetai(product) {
+    this.selected = product;
+  }
+  removeItem(id) {
+    this.products = this.products.filter(product => product.id != id);
+  }
 
   // product : Product = {
   //   name: 'i team 1',

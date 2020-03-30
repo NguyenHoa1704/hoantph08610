@@ -1,25 +1,38 @@
 import { Injectable } from '@angular/core';
-import { data } from './MockData';
+import { Data } from './MockData';
+import { Product } from './Product';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
-  products = data;
-  constructor() { }
+  api = 'https://5e79aefa17314d0016133349.mockapi.io/products';
+  products = Data;
+  constructor(
+    private http: HttpClient
+  ) { }
 
-  getProducts(){
-    return this.products;
+  getProducts(): Observable<Product[]>{
+    return this.http.get<Product[]>(this.api);
   }
-  getProduct(id) {
-    return this.products.find(product => product.id != id);
+  getProduct(id): Observable<Product>{
+    return this.http.get<Product>(`${this.api}/${id}`);
+    // return this.products.find(product => product.id == id);
   }
-  removeProduct(id){
-    return this.products.filter(product => product.id != id);
+  removeProduct(id):Observable<Product> {
+    return this.http.delete<Product>(`${this.api}/${id}`);
+    // return this.products.filter(product => product.id !== id);
   }
-  addProduct(product){
-    const newProduct = { id: 5, ...product, img: 'https://scontent-hkt1-1.xx.fbcdn.net/v/t1.0-9/s960x960/51854065_2184089838521507_6488174379854200832_o.jpg?_nc_cat=108&_nc_sid=7aed08&_nc_ohc=HtLJiqj3y8MAX8MxJwd&_nc_ht=scontent-hkt1-1.xx&_nc_tp=7&oh=d905d4213f535f8ee9fab933f0536a18&oe=5E98B74A', status :true};
-    this.products.push(newProduct);
-    console.log(this.products)
+    addProduct(product): Observable<Product>{
+    return this.http.post<Product>(`${this.api}`, product);
+  
+    // const newProduct = { id: 5, ...product};
+    // this.products.push(newProduct);
+    // console.log(this.products)
+  }
+  updateProduct(product){
+     return this.http.put<Product>(`${this.api}/${product.id}`, product);
   }
 }
