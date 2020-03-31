@@ -2,14 +2,14 @@ import { Injectable } from '@angular/core';
 import { Data } from './MockData';
 import { Product } from './Product';
 import { HttpClient } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
-  api = 'https://5e79aefa17314d0016133349.mockapi.io/products';
-  products = Data;
+  api = 'http://5e82bbd178337f00160ae552.mockapi.io/product';
+  // products = Data;
   constructor(
     private http: HttpClient
   ) { }
