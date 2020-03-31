@@ -57,7 +57,7 @@ ol,
 nav ul,
 nav li,
 fieldset,
-form,
+
 label,
 legend,
 table,
@@ -88,14 +88,19 @@ time,
 mark,
 audio,
 video {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     border: 0;
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
 }
-
+.search {
+  float: right;
+}
+.search img {
+  margin-right: 150px;
+}
 article,
 aside,
 details,
@@ -261,12 +266,14 @@ body a:hover {
 }*/
 
 .container {
-    width: 70%;
-    margin: 0 auto 2em;
+    width: 80%;
     padding: 1.5em;
     background: #fff;
 }
-
+.top-grid,
+.bot-grid{
+  margin-left: -160px;
+}
 .clear {
     clear: both;
 }
@@ -329,10 +336,11 @@ h1.title-w3layouts span {
 .info li.right-text {
     color: #777;
     text-decoration: line-through;
-    margin-left: 6em;
+    margin-left: 20px;
 }
 
-ul.info {
+ul {
+  display: inline-block;
     margin: 1.5em 0;
 }
 
