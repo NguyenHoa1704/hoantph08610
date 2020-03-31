@@ -13,9 +13,8 @@ import { HomeComponent } from './home/home.component';
 import { ProductEditComponent } from './product-edit/product-edit.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { NewComponent } from './new/new.component';
-import { NewService } from './new.service';
 import { HttpClientModule } from '@angular/common/http';
+import { NewComponent } from './new/new.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +29,7 @@ import { HttpClientModule } from '@angular/common/http';
     ProductDetailComponent,
     NotFoundComponent,
     NewComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -37,7 +37,8 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     HttpClientModule
   ],
-  providers: [NewService],
-  bootstrap: [AppComponent]
+  bootstrap: [
+    AppComponent
+  ]
 })
 export class AppModule { }
