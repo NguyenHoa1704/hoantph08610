@@ -15,6 +15,8 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { NotFoundComponent } from './not-found/not-found.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NewComponent } from './new/new.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { NewComponent } from './new/new.component';
     ProductEditComponent,
     ProductDetailComponent,
     NotFoundComponent,
-    NewComponent
+    NewComponent,
+    DashboardComponent,
+    AdminComponent
     
   ],
   imports: [
